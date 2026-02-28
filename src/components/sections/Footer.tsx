@@ -3,29 +3,36 @@
 import { Mail, Instagram, Linkedin, Facebook, Twitter, Phone, MapPin } from 'lucide-react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 export default function Footer() {
   const { t } = useLanguage();
 
   const socialLinks = [
+    // TODO: Replace '#' with actual Instagram profile URL when available
     { icon: Instagram, href: '#', label: 'Instagram' },
+    // TODO: Replace '#' with actual Facebook profile URL when available
     { icon: Facebook, href: '#', label: 'Facebook' },
+    // TODO: Replace '#' with actual Twitter/X profile URL when available
     { icon: Twitter, href: '#', label: 'Twitter' },
+    // TODO: Replace '#' with actual LinkedIn profile URL when available
     { icon: Linkedin, href: '#', label: 'LinkedIn' },
   ];
 
   const quickLinks = [
-    { label: t.footer.about, href: '#' },
+    { label: t.footer.about, href: '/about' },
+    // TODO: Create /careers page when ready
     { label: t.footer.careers, href: '#' },
-    { label: t.footer.blog, href: '#' },
+    { label: t.footer.blog, href: '/blog' },
+    // TODO: Create /press page when ready
     { label: t.footer.press, href: '#' },
   ];
 
   const supportLinks = [
-    { label: t.footer.helpCenter, href: '#' },
-    { label: t.footer.terms, href: '#' },
-    { label: t.footer.privacy, href: '#' },
-    { label: t.footer.cookies, href: '#' },
+    { label: t.footer.helpCenter, href: '/help' },
+    { label: t.footer.terms, href: '/terms' },
+    { label: t.footer.privacy, href: '/privacy' },
+    { label: t.footer.cookies, href: '/cookies' },
   ];
 
   return (
@@ -75,17 +82,26 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <h4 className="font-heading font-semibold text-slate-900 mb-4">
-              Quick Links
+              {t.footer.quickLinks}
             </h4>
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-slate-600 hover:text-emerald-600 transition-colors"
-                  >
-                    {link.label}
-                  </a>
+                  {link.href === '#' ? (
+                    <a
+                      href={link.href}
+                      className="text-slate-600 hover:text-emerald-600 transition-colors"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      href={link.href}
+                      className="text-slate-600 hover:text-emerald-600 transition-colors"
+                    >
+                      {link.label}
+                    </Link>
+                  )}
                 </li>
               ))}
             </ul>
@@ -99,17 +115,17 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <h4 className="font-heading font-semibold text-slate-900 mb-4">
-              Support
+              {t.footer.support}
             </h4>
             <ul className="space-y-3">
               {supportLinks.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-slate-600 hover:text-emerald-600 transition-colors"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -123,7 +139,7 @@ export default function Footer() {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <h4 className="font-heading font-semibold text-slate-900 mb-4">
-              Follow Us
+              {t.footer.followUs}
             </h4>
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -143,7 +159,7 @@ export default function Footer() {
               <span className="text-2xl">⭐</span>
               <div>
                 <p className="font-bold text-emerald-700">4.9/5</p>
-                <p className="text-xs text-slate-500">Based on 250 reviews</p>
+                <p className="text-xs text-slate-500">{t.footer.basedOnReviews}</p>
               </div>
             </div>
           </motion.div>

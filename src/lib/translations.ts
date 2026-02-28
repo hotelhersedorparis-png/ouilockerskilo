@@ -7,6 +7,8 @@ export interface Translations {
     locations: string;
     faq: string;
     bookNow: string;
+    language: string;
+    help: string;
   };
   hero: {
     headline: string;
@@ -62,6 +64,12 @@ export interface Translations {
     quote2Author: string;
     quote3: string;
     quote3Author: string;
+    quote4: string;
+    quote4Author: string;
+    quote5: string;
+    quote5Author: string;
+    quote6: string;
+    quote6Author: string;
   };
   locations: {
     title: string;
@@ -100,6 +108,35 @@ export interface Translations {
     cookies: string;
     contact: string;
     copyright: string;
+    quickLinks: string;
+    support: string;
+    followUs: string;
+    basedOnReviews: string;
+  };
+  newsletter: {
+    title: string;
+    subtitle: string;
+    placeholder: string;
+    button: string;
+    success: string;
+    privacy: string;
+  };
+  cookieConsent: {
+    message: string;
+    accept: string;
+    decline: string;
+    learnMore: string;
+  };
+  contactWidget: {
+    callUs: string;
+    whatsapp: string;
+    contact: string;
+  };
+  promoBanner: {
+    message: string;
+    copy: string;
+    copied: string;
+    dismiss: string;
   };
 }
 
@@ -111,6 +148,8 @@ export const translations: Record<Language, Translations> = {
       locations: 'Locations',
       faq: 'FAQ',
       bookNow: 'Book Now',
+      language: 'Language',
+      help: 'Help',
     },
     hero: {
       headline: 'Secure Self-Storage Lockers, Instant Access',
@@ -148,13 +187,13 @@ export const translations: Record<Language, Translations> = {
       title: 'Choose the Right Size',
       small: 'Small',
       smallDesc: 'Ideal for backpacks, purses, and small shopping bags.',
-      smallPrice: 'From $5/day',
+      smallPrice: 'From €5/day',
       medium: 'Medium',
       mediumDesc: 'Fits 1-2 standard suitcases or a carry-on bag.',
-      mediumPrice: 'From $8/day',
+      mediumPrice: 'From €8/day',
       large: 'Large',
       largeDesc: 'Perfect for sports gear, golf clubs, or 3+ large suitcases.',
-      largePrice: 'From $12/day',
+      largePrice: 'From €12/day',
       note: 'Final price is calculated by duration in the booking engine.',
       bookNow: 'Book Now',
     },
@@ -166,6 +205,12 @@ export const translations: Record<Language, Translations> = {
       quote2Author: 'Marc D. - Student',
       quote3: 'I use the large locker for my golf clubs during the week. So convenient.',
       quote3Author: 'Carlos R. - Local',
+      quote4: 'Stored our bags for a full day while exploring the Marais. The PIN system is genius — no waiting for staff!',
+      quote4Author: 'Michael T., USA',
+      quote5: 'Parfait pour notre séjour à Paris. Nous avons pu visiter le Louvre sans nos valises. Je recommande vivement !',
+      quote5Author: 'Claire D., Belgique',
+      quote6: 'Ottimo servizio! Abbiamo lasciato i bagagli qui prima del check-in e abbiamo esplorato la città liberi. Torneremo!',
+      quote6Author: 'Marco R., Italia',
     },
     locations: {
       title: 'Find a Locker Near You',
@@ -203,7 +248,36 @@ export const translations: Record<Language, Translations> = {
       privacy: 'Privacy Policy',
       cookies: 'Cookie Policy',
       contact: 'help@ouilockers.com',
-      copyright: '© 2024 Oui Lockers. All rights reserved.',
+      copyright: '© 2025 Oui Lockers. All rights reserved.',
+      quickLinks: 'Quick Links',
+      support: 'Support',
+      followUs: 'Follow Us',
+      basedOnReviews: 'Based on 250 reviews',
+    },
+    newsletter: {
+      title: 'Stay Updated',
+      subtitle: 'Get exclusive deals and Paris travel tips delivered to your inbox.',
+      placeholder: 'Enter your email',
+      button: 'Subscribe',
+      success: 'Thanks for subscribing! 🎉',
+      privacy: 'No spam, unsubscribe anytime.',
+    },
+    cookieConsent: {
+      message: 'We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.',
+      accept: 'Accept',
+      decline: 'Decline',
+      learnMore: 'Learn More',
+    },
+    contactWidget: {
+      callUs: 'Call Us',
+      whatsapp: 'WhatsApp',
+      contact: 'Contact',
+    },
+    promoBanner: {
+      message: '🎉 Use code **PARIS10** for 10% off your first booking!',
+      copy: 'Copy Code',
+      copied: 'Copied!',
+      dismiss: 'Dismiss',
     },
   },
   fr: {
@@ -213,6 +287,8 @@ export const translations: Record<Language, Translations> = {
       locations: 'Emplacements',
       faq: 'FAQ',
       bookNow: 'Réserver',
+      language: 'Langue',
+      help: 'Aide',
     },
     hero: {
       headline: 'Consignes de stockage sécurisées, accès instantané',
@@ -268,6 +344,12 @@ export const translations: Record<Language, Translations> = {
       quote2Author: 'Marc D. - Étudiant',
       quote3: 'J\'utilise le grand casier pour mes clubs de golf pendant la semaine. Très pratique.',
       quote3Author: 'Carlos R. - Local',
+      quote4: 'Nous avons stocké nos sacs toute la journée en explorant le Marais. Le système PIN est génial — pas d\'attente pour le personnel !',
+      quote4Author: 'Michael T., USA',
+      quote5: 'Parfait pour notre séjour à Paris. Nous avons pu visiter le Louvre sans nos valises. Je recommande vivement !',
+      quote5Author: 'Claire D., Belgique',
+      quote6: 'Excellent service ! Nous avons laissé nos bagages ici avant le check-in et avons exploré la ville librement. Nous reviendrons !',
+      quote6Author: 'Marco R., Italia',
     },
     locations: {
       title: 'Trouvez un casier près de chez vous',
@@ -305,7 +387,36 @@ export const translations: Record<Language, Translations> = {
       privacy: 'Politique de confidentialité',
       cookies: 'Politique de cookies',
       contact: 'help@ouilockers.com',
-      copyright: '© 2024 Oui Lockers. Tous droits réservés.',
+      copyright: '© 2025 Oui Lockers. Tous droits réservés.',
+      quickLinks: 'Liens Rapides',
+      support: 'Support',
+      followUs: 'Suivez-nous',
+      basedOnReviews: 'Basé sur 250 avis',
+    },
+    newsletter: {
+      title: 'Restez Informé',
+      subtitle: 'Recevez des offres exclusives et des conseils de voyage à Paris dans votre boîte mail.',
+      placeholder: 'Entrez votre email',
+      button: 'S\'abonner',
+      success: 'Merci pour votre inscription ! 🎉',
+      privacy: 'Pas de spam, désinscription à tout moment.',
+    },
+    cookieConsent: {
+      message: 'Nous utilisons des cookies pour améliorer votre expérience. En continuant à visiter ce site, vous acceptez notre utilisation des cookies.',
+      accept: 'Accepter',
+      decline: 'Refuser',
+      learnMore: 'En savoir plus',
+    },
+    contactWidget: {
+      callUs: 'Appelez-nous',
+      whatsapp: 'WhatsApp',
+      contact: 'Contact',
+    },
+    promoBanner: {
+      message: '🎉 Utilisez le code **PARIS10** pour 10% de réduction sur votre première réservation !',
+      copy: 'Copier le code',
+      copied: 'Copié !',
+      dismiss: 'Fermer',
     },
   },
   es: {
@@ -315,6 +426,8 @@ export const translations: Record<Language, Translations> = {
       locations: 'Ubicaciones',
       faq: 'Preguntas Frecuentes',
       bookNow: 'Reservar ahora',
+      language: 'Idioma',
+      help: 'Ayuda',
     },
     hero: {
       headline: 'Taquillas de almacenamiento seguro, acceso instantáneo',
@@ -352,13 +465,13 @@ export const translations: Record<Language, Translations> = {
       title: 'Elige el tamaño correcto',
       small: 'Pequeño',
       smallDesc: 'Ideal para mochilas, bolsos y pequeñas bolsas de compras.',
-      smallPrice: 'Desde $5/día',
+      smallPrice: 'Desde €5/día',
       medium: 'Mediano',
       mediumDesc: 'Cabe 1-2 maletas estándar o una bolsa de mano.',
-      mediumPrice: 'Desde $8/día',
+      mediumPrice: 'Desde €8/día',
       large: 'Grande',
       largeDesc: 'Perfecto para equipos deportivos, palos de golf o 3+ maletas grandes.',
-      largePrice: 'Desde $12/día',
+      largePrice: 'Desde €12/día',
       note: 'El precio final se calcula por duración en el motor de reservas.',
       bookNow: 'Reservar ahora',
     },
@@ -370,6 +483,12 @@ export const translations: Record<Language, Translations> = {
       quote2Author: 'Marc D. - Estudiante',
       quote3: 'Uso la taquilla grande para mis palos de golf durante la semana. Muy conveniente.',
       quote3Author: 'Carlos R. - Local',
+      quote4: '¡Guardamos nuestras maletas todo el día mientras explorábamos el Marais. El sistema PIN es genial — sin esperar al personal!',
+      quote4Author: 'Michael T., USA',
+      quote5: '¡Perfecto para nuestra estancia en París. Pudimos visitar el Louvre sin nuestras maletas. ¡Lo recomiendo mucho!',
+      quote5Author: 'Claire D., Belgique',
+      quote6: '¡Excelente servicio! Dejamos el equipaje aquí antes del check-in y exploramos la ciudad libremente. ¡Volveremos!',
+      quote6Author: 'Marco R., Italia',
     },
     locations: {
       title: 'Encuentra una taquilla cerca de ti',
@@ -407,7 +526,36 @@ export const translations: Record<Language, Translations> = {
       privacy: 'Política de privacidad',
       cookies: 'Política de cookies',
       contact: 'help@ouilockers.com',
-      copyright: '© 2024 Oui Lockers. Todos los derechos reservados.',
+      copyright: '© 2025 Oui Lockers. Todos los derechos reservados.',
+      quickLinks: 'Enlaces Rápidos',
+      support: 'Soporte',
+      followUs: 'Síguenos',
+      basedOnReviews: 'Basado en 250 reseñas',
+    },
+    newsletter: {
+      title: 'Mantente Informado',
+      subtitle: 'Recibe ofertas exclusivas y consejos de viaje por París en tu bandeja de entrada.',
+      placeholder: 'Ingresa tu email',
+      button: 'Suscribirse',
+      success: '¡Gracias por suscribirte! 🎉',
+      privacy: 'Sin spam, cancela cuando quieras.',
+    },
+    cookieConsent: {
+      message: 'Usamos cookies para mejorar tu experiencia. Al continuar visitando este sitio, aceptas nuestro uso de cookies.',
+      accept: 'Aceptar',
+      decline: 'Rechazar',
+      learnMore: 'Más información',
+    },
+    contactWidget: {
+      callUs: 'Llámanos',
+      whatsapp: 'WhatsApp',
+      contact: 'Contacto',
+    },
+    promoBanner: {
+      message: '🎉 ¡Usa el código **PARIS10** para un 10% de descuento en tu primera reserva!',
+      copy: 'Copiar código',
+      copied: '¡Copiado!',
+      dismiss: 'Cerrar',
     },
   },
 };

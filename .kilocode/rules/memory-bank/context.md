@@ -34,6 +34,15 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
   - Expanded Testimonials from 3 to 6 reviews with diverse nationalities (UK, FR, ES, USA, BE, IT)
   - Added Newsletter section (email capture with success state, placed between Testimonials and FAQ)
   - Added FAQ JSON-LD schema for Google FAQ rich results
+- [x] Fixed and enhanced translations system (translations.ts):
+  - Fixed currency: EN/ES sizes now use € instead of $ (€5, €8, €12/day)
+  - Fixed copyright year: © 2024 → © 2025 in all 3 languages
+  - Added `newsletter`, `cookieConsent`, `contactWidget`, `promoBanner` translation sections (EN/FR/ES)
+  - Added `footer.quickLinks`, `footer.support`, `footer.followUs`, `footer.basedOnReviews` to all 3 languages
+  - Added `nav.language` and `nav.help` to all 3 languages
+  - Added testimonials quote4–quote6 with authors to all 3 languages
+- [x] Fixed Footer.tsx: replaced hardcoded "Quick Links", "Support", "Follow Us", "Based on 250 reviews" with translation keys; fixed dead href="#" links (About→/about, Blog→/blog, Help Center→/help, Terms→/terms, Privacy→/privacy, Cookies→/cookies); added TODO comments for Careers, Press, social links
+- [x] Fixed Navigation.tsx: added Help link (→/help) using t.nav.help before language switcher on desktop; replaced hardcoded "Language" with t.nav.language in mobile menu
 
 ## Current Structure
 

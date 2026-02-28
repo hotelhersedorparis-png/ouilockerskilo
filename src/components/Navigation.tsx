@@ -92,6 +92,15 @@ export default function Navigation() {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* Help Link */}
+            <Link
+              href="/help"
+              className="flex items-center gap-2 text-sm font-medium text-slate-600 hover:text-emerald-600 transition-colors"
+            >
+              <HelpCircle className="w-4 h-4" />
+              {t.nav.help}
+            </Link>
+
             {/* Share Button */}
             <ShareButtons />
 
@@ -144,7 +153,7 @@ export default function Navigation() {
               {/* Language Switcher Mobile */}
               <div className="pt-3 border-t border-slate-200">
                 <p className="px-4 py-2 text-sm text-slate-500 font-medium">
-                  Language
+                  {t.nav.language}
                 </p>
                 <div className="flex flex-col gap-1">
                   {languages.map((lang) => (
