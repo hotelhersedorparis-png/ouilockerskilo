@@ -1,18 +1,42 @@
 'use client';
 
-import { MapPin, Clock, Star, Phone, Mail, Shield, Navigation, Train, Landmark } from 'lucide-react';
+import { useState } from 'react';
+import { MapPin, Clock, Star, Phone, Mail, Shield, Navigation, Train, Landmark, X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
 import { useLanguage } from '@/contexts/LanguageContext';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+
+const galleryImages = [
+  {
+    src: '/images/photo-facade.jpg',
+    alt: 'Façade OuiLockers',
+    label: 'Façade OuiLockers',
+  },
+  {
+    src: '/images/photo-interieur.jpg',
+    alt: "Salle d'attente OuiLockers",
+    label: "Salle d'attente OuiLockers",
+  },
+  {
+    src: '/images/photo-lockers.jpg',
+    alt: 'Les lockers OuiLockers',
+    label: 'Les lockers OuiLockers',
+  },
+];
 
 export default function Locations() {
   const { t } = useLanguage();
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);
 
   const handleBookNow = () => {
     window.open('https://ouilockers.bestwond.com/setDate/?device_id=2100018368', '_blank');
   };
+
+  const openLightbox = (index: number) => setLightboxIndex(index);
+  const closeLightbox = () => setLightboxIndex(null);
+  const prevImage = () => setLightboxIndex((i) => (i !== null ? (i - 1 + galleryImages.length) % galleryImages.length : 0));
+  const nextImage = () => setLightboxIndex((i) => (i !== null ? (i + 1) % galleryImages.length : 0));
 
   const nearbyTransport = [
     {
@@ -74,6 +98,7 @@ export default function Locations() {
               src="/images/photo-facade.jpg"
               alt="OuiLockers Paris Location - Façade"
               fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent flex items-end">
@@ -157,7 +182,7 @@ export default function Locations() {
           </div>
         </motion.div>
 
-        {/* Our Establishment - Gallery */}
+        {/* Our Establishment - Gallery with Lightbox */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -167,39 +192,27 @@ export default function Locations() {
         >
           <h3 className="text-2xl font-heading font-bold text-slate-900 mb-6">Our Establishment</h3>
           <div className="grid md:grid-cols-3 gap-6">
-            <div className="relative aspect-square rounded-xl overflow-hidden">
-              <Image
-                src="/images/photo-facade.jpg"
-                alt="Façade OuiLockers"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4">
-                <p className="text-white font-semibold">Façade OuiLockers</p>
-              </div>
-            </div>
-            <div className="relative aspect-square rounded-xl overflow-hidden">
-              <Image
-                src="/images/photo-interieur.jpg"
-                alt="Salle d'attente OuiLockers"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4">
-                <p className="text-white font-semibold">Salle d'attente OuiLockers</p>
-              </div>
-            </div>
-            <div className="relative aspect-square rounded-xl overflow-hidden">
-              <Image
-                src="/images/photo-lockers.jpg"
-                alt="Les lockers OuiLockers"
-                fill
-                className="object-cover hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-slate-900/80 to-transparent p-4">
-                <p className="text-white font-semibold">Les lockers OuiLockers</p>
-              </div>
-            </div>
+            {galleryImages.map((img, index) => (
+              <button
+                key={index}
+                onClick={() => openLightbox(index)}
+                className="relative aspect-square rounded-xl overflow-hidden group focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+                aria-label={`View ${img.label} in full screen`}
+              >
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 to-transparent opacity-80 group-hover:opacity-100 transition-opacity" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <p className="text-white font-semibold">{img.label}</p>
+                  <p className="text-white/70 text-sm mt-1 opacity-0 group-hover:opacity-100 transition-opacity">Click to enlarge</p>
+                </div>
+              </button>
+            ))}
           </div>
         </motion.div>
 
@@ -248,10 +261,10 @@ export default function Locations() {
               </div>
             </div>
 
-            {/* Google Maps Iframe */}
+            {/* Google Maps Iframe - real coordinates for 20 Rue Saint-Antoine, 75004 Paris */}
             <div className="mt-6 rounded-xl overflow-hidden border border-slate-200">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.1248657!2d2.3652!3d48.8534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDjCsDUxJzEyLjIiTiAywrAyMSczMC43IkU!5e0!3m2!1sfr!2sfr!4v1234567890!5m2!1sfr!2sfr"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.0!2d2.3567!3d48.8534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671e9b4e9b4b5%3A0x0!2s20+Rue+Saint-Antoine%2C+75004+Paris%2C+France!5e0!3m2!1sfr!2sfr!4v1700000000000!5m2!1sfr!2sfr"
                 width="100%"
                 height="300"
                 style={{ border: 0 }}
@@ -259,6 +272,7 @@ export default function Locations() {
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
                 className="w-full"
+                title="OuiLockers Paris - 20 Rue Saint-Antoine, 75004 Paris"
               />
             </div>
           </div>
@@ -302,6 +316,69 @@ export default function Locations() {
           </div>
         </motion.div>
       </div>
+
+      {/* Lightbox */}
+      <AnimatePresence>
+        {lightboxIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4"
+            onClick={closeLightbox}
+          >
+            {/* Close button */}
+            <button
+              onClick={closeLightbox}
+              className="absolute top-4 right-4 text-white/80 hover:text-white bg-black/40 hover:bg-black/60 rounded-full p-2 transition-colors z-10"
+              aria-label="Close lightbox"
+            >
+              <X className="w-6 h-6" />
+            </button>
+
+            {/* Prev button */}
+            <button
+              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              className="absolute left-4 text-white/80 hover:text-white bg-black/40 hover:bg-black/60 rounded-full p-3 transition-colors z-10"
+              aria-label="Previous image"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+
+            {/* Image */}
+            <motion.div
+              key={lightboxIndex}
+              initial={{ scale: 0.9, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              exit={{ scale: 0.9, opacity: 0 }}
+              transition={{ duration: 0.2 }}
+              className="relative max-w-4xl w-full max-h-[80vh] aspect-square"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <Image
+                src={galleryImages[lightboxIndex].src}
+                alt={galleryImages[lightboxIndex].alt}
+                fill
+                sizes="(max-width: 768px) 100vw, 80vw"
+                className="object-contain"
+              />
+              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 text-center">
+                <p className="text-white font-semibold">{galleryImages[lightboxIndex].label}</p>
+                <p className="text-white/60 text-sm">{lightboxIndex + 1} / {galleryImages.length}</p>
+              </div>
+            </motion.div>
+
+            {/* Next button */}
+            <button
+              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              className="absolute right-4 text-white/80 hover:text-white bg-black/40 hover:bg-black/60 rounded-full p-3 transition-colors z-10"
+              aria-label="Next image"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

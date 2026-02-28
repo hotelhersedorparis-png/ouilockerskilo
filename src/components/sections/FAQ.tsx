@@ -37,8 +37,62 @@ export default function FAQ() {
     },
   ];
 
+  // JSON-LD FAQ schema (always use English for SEO)
+  const faqSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'How do I receive my access code?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'You will receive a 6-digit PIN code via SMS and email immediately after your booking is confirmed.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can I extend my rental time?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes! You can extend your rental through the link in your confirmation email or by visiting our booking engine again, as long as the locker is available.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What items are prohibited?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'For safety reasons, flammable materials, illegal substances, and perishable food items are not allowed in the lockers.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'What if I lose my code?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Contact our support team at help@ouilockers.com with your booking ID. We can verify your identity and resend your code.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Is there a size limit for items?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: "Please check the dimensions on our Sizes page. If your item doesn't fit, the locker door will not close, and the system will alert you to choose a larger size.",
+        },
+      },
+    ],
+  };
+
   return (
     <section id="faq" className="py-20 lg:py-24 bg-white">
+      {/* JSON-LD FAQ Schema for Google rich results */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

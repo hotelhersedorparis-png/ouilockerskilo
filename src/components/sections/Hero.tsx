@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import LiveAvailability from '@/components/LiveAvailability';
 
 export default function Hero() {
   const { t, language } = useLanguage();
@@ -24,6 +25,7 @@ export default function Hero() {
           src="/images/hero-marais.jpg"
           alt="OuiLockers Paris Le Marais"
           fill
+          sizes="100vw"
           className="object-cover"
           priority
         />
@@ -108,10 +110,20 @@ export default function Hero() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 0.5, delay: 0.5 }}
-              className="flex items-center justify-center lg:justify-start gap-2 text-white/90 font-medium text-sm drop-shadow-md"
+              className="flex items-center justify-center lg:justify-start gap-2 text-white/90 font-medium text-sm drop-shadow-md mb-4"
             >
               <MapPin className="w-4 h-4 text-emerald-400" />
               <span>20 Rue Saint-Antoine, 75004 Paris</span>
+            </motion.div>
+
+            {/* Live Availability */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="flex justify-center lg:justify-start"
+            >
+              <LiveAvailability />
             </motion.div>
           </motion.div>
 

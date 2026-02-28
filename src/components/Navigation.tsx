@@ -51,6 +51,7 @@ export default function Navigation() {
                 src="/logo-officiel.png"
                 alt="OuiLockers"
                 fill
+                sizes="144px"
                 className="object-contain"
               />
             </div>

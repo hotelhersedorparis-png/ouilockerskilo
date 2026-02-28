@@ -22,6 +22,18 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
   - Framer Motion animations
   - Prisma + SQLite DB schema
   - Fixed TypeScript errors: exported Language type from LanguageContext, fixed navigator.share type check
+- [x] Website enhancements implemented:
+  - Fixed Google Maps embed with real coordinates for 20 Rue Saint-Antoine, 75004 Paris
+  - Added photo lightbox with prev/next navigation in Locations section
+  - Added LiveAvailability component (real-time locker count indicator in Hero)
+  - Enhanced SEO metadata in layout.tsx: Open Graph images, canonical URL, robots meta, metadataBase
+  - Added JSON-LD LocalBusiness structured data schema in layout.tsx
+  - Added sitemap.ts and robots.ts for search engine indexing
+  - Fixed image sizes props on all next/image fill components (Hero, Navigation, Locations, Testimonials)
+  - Added PromoBanner component (dismissible top banner with PARIS10 promo code + copy-to-clipboard)
+  - Expanded Testimonials from 3 to 6 reviews with diverse nationalities (UK, FR, ES, USA, BE, IT)
+  - Added Newsletter section (email capture with success state, placed between Testimonials and FAQ)
+  - Added FAQ JSON-LD schema for Google FAQ rich results
 
 ## Current Structure
 

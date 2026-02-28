@@ -1,6 +1,7 @@
 'use client';
 
 import Navigation from '@/components/Navigation';
+import PromoBanner from '@/components/PromoBanner';
 import Hero from '@/components/sections/Hero';
 import TrustBar from '@/components/sections/TrustBar';
 import Features from '@/components/sections/Features';
@@ -8,6 +9,7 @@ import HowItWorks from '@/components/sections/HowItWorks';
 import Sizes from '@/components/sections/Sizes';
 import Locations from '@/components/sections/Locations';
 import Testimonials from '@/components/sections/Testimonials';
+import Newsletter from '@/components/sections/Newsletter';
 import FAQ from '@/components/sections/FAQ';
 import CTA from '@/components/sections/CTA';
 import Footer from '@/components/sections/Footer';
@@ -19,6 +21,7 @@ import CookieConsent from '@/components/CookieConsent';
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col bg-background">
+      <PromoBanner />
       <Navigation />
       
       <main className="flex-grow">
@@ -29,6 +32,7 @@ export default function Home() {
         <Sizes />
         <Locations />
         <Testimonials />
+        <Newsletter />
         <FAQ />
         <CTA />
       </main>
