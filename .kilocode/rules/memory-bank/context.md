@@ -44,6 +44,9 @@ The template is a clean Next.js 16 starter with TypeScript and Tailwind CSS 4. I
 | `src/app/globals.css` | Global styles | ✅ Ready |
 | `.kilocode/` | AI context & recipes | ✅ Ready |
 
+- [x] Merged CallWidget + WhatsAppWidget into single ContactWidget (floating button expands to show 3CX call + WhatsApp options with Framer Motion animations)
+- [x] Added comprehensive README.md (business info, tech stack, architecture, deployment, developer guide)
+
 ## Current Focus
 
 The template is ready. Next steps depend on user requirements:
