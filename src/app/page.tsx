@@ -13,8 +13,7 @@ import Newsletter from '@/components/sections/Newsletter';
 import FAQ from '@/components/sections/FAQ';
 import CTA from '@/components/sections/CTA';
 import Footer from '@/components/sections/Footer';
-import CallWidget from '@/components/CallWidget';
-import WhatsAppWidget from '@/components/WhatsAppWidget';
+import ContactWidget from '@/components/ContactWidget';
 import BackToTop from '@/components/BackToTop';
 import CookieConsent from '@/components/CookieConsent';
 
@@ -40,8 +39,7 @@ export default function Home() {
       <Footer />
       <CookieConsent />
       <BackToTop />
-      <WhatsAppWidget />
-      <CallWidget />
+      <ContactWidget />
     </div>
   );
 }
