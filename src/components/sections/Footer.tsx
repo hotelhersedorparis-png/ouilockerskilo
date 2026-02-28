@@ -21,11 +21,9 @@ export default function Footer() {
 
   const quickLinks = [
     { label: t.footer.about, href: '/about' },
-    // TODO: Create /careers page when ready
-    { label: t.footer.careers, href: '#' },
+    { label: t.footer.careers, href: '/careers' },
     { label: t.footer.blog, href: '/blog' },
-    // TODO: Create /press page when ready
-    { label: t.footer.press, href: '#' },
+    { label: t.footer.press, href: '/press' },
   ];
 
   const supportLinks = [

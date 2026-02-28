@@ -138,6 +138,129 @@ export interface Translations {
     copied: string;
     dismiss: string;
   };
+  about: {
+    title: string;
+    subtitle: string;
+    lockersStored: string;
+    happyCustomers: string;
+    rating: string;
+    locations: string;
+    story: {
+      title: string;
+      paragraph1: string;
+      paragraph2: string;
+    };
+    founded: string;
+    ourValues: string;
+    valuesSubtitle: string;
+    values: {
+      security: { title: string; description: string; };
+      convenience: { title: string; description: string; };
+      location: { title: string; description: string; };
+    };
+    cta: {
+      title: string;
+      subtitle: string;
+      button: string;
+    };
+  };
+  terms: {
+    title: string;
+    lastUpdated: string;
+    section1: { title: string; content: string; };
+    section2: { title: string; content: string; };
+    section3: { title: string; content: string; };
+    section4: { title: string; content: string; };
+    section5: { title: string; content: string; };
+    section6: { title: string; content: string; };
+  };
+  privacy: {
+    title: string;
+    subtitle: string;
+    section1: { title: string; content: string; };
+    section2: { title: string; content: string; };
+    section3: { title: string; content: string; };
+    section4: { title: string; content: string; };
+    section5: { title: string; content: string; };
+    contactTitle: string;
+    phone: string;
+    address: string;
+  };
+  cookies: {
+    title: string;
+    subtitle: string;
+    intro: string;
+    essential: { title: string; description: string; examples: string[]; };
+    functional: { title: string; description: string; examples: string[]; };
+    analytics: { title: string; description: string; examples: string[]; };
+    manageTitle: string;
+    manageDescription: string;
+    browserSettings: string;
+    cookieSettings: string;
+    thirdPartyTitle: string;
+    thirdPartyDescription: string;
+    updatesTitle: string;
+    updatesDescription: string;
+  };
+  blog: {
+    title: string;
+    subtitle: string;
+    categories: { all: string; tips: string; locations: string; travel: string; };
+    posts: {
+      guide: { title: string; excerpt: string; date: string; readTime: string; };
+      marais: { title: string; excerpt: string; date: string; readTime: string; };
+      tips: { title: string; excerpt: string; date: string; readTime: string; };
+    };
+    readMore: string;
+    newsletter: { title: string; subtitle: string; placeholder: string; button: string; };
+  };
+  careers: {
+    title: string;
+    subtitle: string;
+    whyJoin: string;
+    whyJoinSubtitle: string;
+    benefits: {
+      health: { title: string; description: string; };
+      flexibility: { title: string; description: string; };
+      growth: { title: string; description: string; };
+    };
+    openPositions: string;
+    positionsSubtitle: string;
+    positions: {
+      customerService: { title: string; department: string; location: string; type: string; };
+      operationsManager: { title: string; department: string; location: string; type: string; };
+    };
+    apply: string;
+    noPositions: string;
+    cta: { title: string; subtitle: string; button: string; };
+  };
+  press: {
+    title: string;
+    subtitle: string;
+    pressKit: string;
+    pressKitDescription: string;
+    brandAssets: string;
+    brandAssetsDesc: string;
+    factSheet: string;
+    factSheetDesc: string;
+    highResPhotos: string;
+    download: string;
+    releasesTitle: string;
+    releases: {
+      expansion: { date: string; title: string; excerpt: string; };
+      partnership: { date: string; title: string; excerpt: string; };
+      award: { date: string; title: string; excerpt: string; };
+    };
+    coverageTitle: string;
+    coverage: {
+      figaro: { date: string; title: string; };
+      echos: { date: string; title: string; };
+      match: { date: string; title: string; };
+    };
+    readMore: string;
+    contactTitle: string;
+    contactDescription: string;
+  };
 }
 
 export const translations: Record<Language, Translations> = {
@@ -279,6 +402,252 @@ export const translations: Record<Language, Translations> = {
       copied: 'Copied!',
       dismiss: 'Dismiss',
     },
+    about: {
+      title: 'About Oui Lockers',
+      subtitle: 'Making luggage storage simple, secure, and accessible across Paris.',
+      lockersStored: 'Lockers Stored',
+      happyCustomers: 'Happy Customers',
+      rating: 'Rating',
+      locations: 'Locations',
+      story: {
+        title: 'Our Story',
+        paragraph1: 'Founded in 2020, Oui Lockers began with a simple mission: to make luggage storage stress-free for travelers visiting Paris. What started as a single location near the Marais has grown into multiple convenient locations across the city.',
+        paragraph2: 'Today, we continue to innovate with smart, contactless lockers that give travelers the freedom to explore Paris hands-free. Our team is passionate about customer service and ensuring every visitor has a seamless experience.',
+      },
+      founded: 'Founded in Paris',
+      ourValues: 'Our Values',
+      valuesSubtitle: 'What drives us every day',
+      values: {
+        security: {
+          title: 'Security First',
+          description: 'Your belongings are safe with us. All lockers are monitored 24/7 by CCTV and equipped with individual alarm systems.',
+        },
+        convenience: {
+          title: 'Maximum Convenience',
+          description: 'Book online in seconds, access your locker instantly with a PIN code, and enjoy 24/7 availability.',
+        },
+        location: {
+          title: 'Prime Locations',
+          description: 'Our lockers are situated in the heart of Paris, making it easy to drop off and pick up your luggage.',
+        },
+      },
+      cta: {
+        title: 'Ready to explore Paris?',
+        subtitle: 'Find a locker near you and start your adventure.',
+        button: 'Find a Locker',
+      },
+    },
+    terms: {
+      title: 'Terms of Service',
+      lastUpdated: 'Last updated: January 2025',
+      section1: {
+        title: '1. Acceptance of Terms',
+        content: 'By accessing and using Oui Lockers services, you accept and agree to be bound by the terms and provision of this agreement.',
+      },
+      section2: {
+        title: '2. Description of Service',
+        content: 'Oui Lockers provides users with access to secure self-storage lockers in various locations across Paris. Users can rent lockers on an hourly, daily, or monthly basis.',
+      },
+      section3: {
+        title: '3. User Responsibilities',
+        content: 'Users are responsible for ensuring their belongings are properly secured and for maintaining their access codes. Users must not store prohibited items.',
+      },
+      section4: {
+        title: '4. Payment and Pricing',
+        content: 'All rentals must be paid in advance. Prices are calculated based on the duration of rental and locker size selected.',
+      },
+      section5: {
+        title: '5. Limitation of Liability',
+        content: 'Oui Lockers shall not be liable for any loss or damage to stored items, except where caused by our negligence.',
+      },
+      section6: {
+        title: '6. Contact Us',
+        content: 'If you have any questions about these Terms of Service, please contact us at help@ouilockers.com.',
+      },
+    },
+    privacy: {
+      title: 'Privacy Policy',
+      subtitle: 'How we protect and handle your personal data.',
+      section1: {
+        title: 'Information We Collect',
+        content: 'We collect personal information such as your name, email, phone number, and payment details when you make a booking.',
+      },
+      section2: {
+        title: 'How We Use Your Information',
+        content: 'Your information is used to process bookings, provide customer support, and communicate with you about your reservations.',
+      },
+      section3: {
+        title: 'Data Protection',
+        content: 'We implement appropriate security measures to protect your personal data against unauthorized access, alteration, disclosure, or destruction.',
+      },
+      section4: {
+        title: 'Your Rights',
+        content: 'You have the right to access, correct, or delete your personal data. Contact us to exercise these rights.',
+      },
+      section5: {
+        title: 'Changes to This Policy',
+        content: 'We may update this privacy policy from time to time. Any changes will be posted on this page.',
+      },
+      contactTitle: 'Contact Us',
+      phone: 'Phone',
+      address: 'Address',
+    },
+    cookies: {
+      title: 'Cookie Policy',
+      subtitle: 'Understanding how we use cookies.',
+      intro: 'This Cookie Policy explains what Cookies are and how Oui Lockers uses them. By using our service, you agree to our use of cookies.',
+      essential: {
+        title: 'Essential Cookies',
+        description: 'These cookies are necessary for the website to function and cannot be switched off.',
+        examples: ['Session security', 'Login state', 'Basket functionality'],
+      },
+      functional: {
+        title: 'Functional Cookies',
+        description: 'These cookies enable enhanced functionality and personalization.',
+        examples: ['Language preferences', 'Region settings'],
+      },
+      analytics: {
+        title: 'Analytics Cookies',
+        description: 'These cookies help us understand how visitors interact with our website.',
+        examples: ['Page views', 'Traffic sources', 'User journeys'],
+      },
+      manageTitle: 'Managing Your Cookies',
+      manageDescription: 'You can control or delete cookies through your browser settings.',
+      browserSettings: 'Browser Settings',
+      cookieSettings: 'Cookie Settings',
+      thirdPartyTitle: 'Third-Party Cookies',
+      thirdPartyDescription: 'We may use third-party services that also set cookies on your device.',
+      updatesTitle: 'Updates to This Policy',
+      updatesDescription: 'We may update this policy from time to time. Please review it periodically.',
+    },
+    blog: {
+      title: 'Blog',
+      subtitle: 'Tips, guides, and stories about luggage storage and Paris travel.',
+      categories: {
+        all: 'All',
+        tips: 'Tips',
+        locations: 'Locations',
+        travel: 'Travel',
+      },
+      posts: {
+        guide: {
+          title: 'The Ultimate Guide to Luggage Storage in Paris',
+          excerpt: 'Everything you need to know about storing your luggage safely while exploring the city of lights.',
+          date: 'Jan 15, 2025',
+          readTime: '5 min read',
+        },
+        marais: {
+          title: 'Best Luggage Storage Spots Near Le Marais',
+          excerpt: 'Discover the most convenient locations for storing your bags while shopping in the Marais district.',
+          date: 'Jan 10, 2025',
+          readTime: '3 min read',
+        },
+        tips: {
+          title: '10 Tips for Traveling Light in Paris',
+          excerpt: 'Learn how to pack smart and make the most of your Paris trip without the heavy baggage.',
+          date: 'Jan 5, 2025',
+          readTime: '4 min read',
+        },
+      },
+      readMore: 'Read more',
+      newsletter: {
+        title: 'Get Travel Tips',
+        subtitle: 'Subscribe to our newsletter for exclusive deals and Paris travel advice.',
+        placeholder: 'Enter your email',
+        button: 'Subscribe',
+      },
+    },
+    careers: {
+      title: 'Careers at Oui Lockers',
+      subtitle: 'Join our team and help revolutionize luggage storage.',
+      whyJoin: 'Why Join Us?',
+      whyJoinSubtitle: 'Be part of a growing startup in the heart of Paris',
+      benefits: {
+        health: {
+          title: 'Health Benefits',
+          description: 'Comprehensive health insurance and wellness programs.',
+        },
+        flexibility: {
+          title: 'Flexible Work',
+          description: 'Remote work options and flexible working hours.',
+        },
+        growth: {
+          title: 'Growth Opportunities',
+          description: 'Career development and training programs.',
+        },
+      },
+      openPositions: 'Open Positions',
+      positionsSubtitle: 'Find your next role at Oui Lockers',
+      positions: {
+        customerService: {
+          title: 'Customer Service Representative',
+          department: 'Operations',
+          location: 'Paris, France',
+          type: 'Full-time',
+        },
+        operationsManager: {
+          title: 'Operations Manager',
+          department: 'Management',
+          location: 'Paris, France',
+          type: 'Full-time',
+        },
+      },
+      apply: 'Apply Now',
+      noPositions: 'No open positions at the moment. Check back soon!',
+      cta: {
+        title: 'Don\'t see the right role?',
+        subtitle: 'We\'re always looking for talented people. Send us your CV!',
+        button: 'Email Us',
+      },
+    },
+    press: {
+      title: 'Press',
+      subtitle: 'Latest news, media coverage, and press resources.',
+      pressKit: 'Press Kit',
+      pressKitDescription: 'Download our brand assets and media materials.',
+      brandAssets: 'Brand Assets',
+      brandAssetsDesc: 'Logos, colors, and brand guidelines',
+      factSheet: 'Fact Sheet',
+      factSheetDesc: 'Company overview and key facts',
+      highResPhotos: 'High-Res Photos',
+      download: 'Download',
+      releasesTitle: 'Press Releases',
+      releases: {
+        expansion: {
+          date: 'December 2024',
+          title: 'Oui Lockers Expands to 5 New Locations in Paris',
+          excerpt: 'The leading luggage storage service announces rapid expansion across the French capital.',
+        },
+        partnership: {
+          date: 'October 2024',
+          title: 'Oui Lockers Partners with Major Hotels',
+          excerpt: 'New partnerships make luggage storage more accessible for hotel guests.',
+        },
+        award: {
+          date: 'August 2024',
+          title: 'Oui Lockers Wins Best Travel Innovation Award',
+          excerpt: 'Recognition for revolutionizing luggage storage in European cities.',
+        },
+      },
+      coverageTitle: 'Media Coverage',
+      coverage: {
+        figaro: {
+          date: 'November 2024',
+          title: 'How Oui Lockers is Simplifying Travel in Paris',
+        },
+        echos: {
+          date: 'September 2024',
+          title: 'The Startup Revolutionizing Luggage Storage',
+        },
+        match: {
+          date: 'July 2024',
+          title: 'Paris\'s Smart Solution for Travelers',
+        },
+      },
+      readMore: 'Read more',
+      contactTitle: 'Press Contact',
+      contactDescription: 'For media inquiries, please contact our press team.',
+    },
   },
   fr: {
     nav: {
@@ -418,6 +787,252 @@ export const translations: Record<Language, Translations> = {
       copied: 'Copié !',
       dismiss: 'Fermer',
     },
+    about: {
+      title: 'À propos d\'Oui Lockers',
+      subtitle: 'Faire du stockage de bagages quelque chose de simple, sécurisé et accessible à Paris.',
+      lockersStored: 'Bagages stockés',
+      happyCustomers: 'Clients satisfaits',
+      rating: 'Note',
+      locations: 'Emplacements',
+      story: {
+        title: 'Notre histoire',
+        paragraph1: 'Fondée en 2020, Oui Lockers a commencé avec une mission simple : rendre le stockage de bagages sans stress pour les voyageurs visitant Paris. Ce qui a commencé comme un seul emplacement près du Marais s\'est développé en plusieurs endroits pratiques à travers la ville.',
+        paragraph2: 'Aujourd\'hui, nous continuons à innover avec des casiers intelligents et sans contact qui donnent aux voyageurs la liberté d\'explorer Paris les mains libres. Notre équipe est passionnée par le service client et s\'assure que chaque visiteur ait une expérience fluide.',
+      },
+      founded: 'Fondé à Paris',
+      ourValues: 'Nos valeurs',
+      valuesSubtitle: 'Ce qui nous pousse chaque jour',
+      values: {
+        security: {
+          title: 'Sécurité avant tout',
+          description: 'Vos affaires sont en sécurité avec nous. Tous les casiers sont surveillés 24h/24 par CCTV et équipés de systèmes d\'alarme individuels.',
+        },
+        convenience: {
+          title: 'Commodité maximale',
+          description: 'Réservez en ligne en quelques secondes, accédez à votre casier instantanément avec un code PIN, et profitez d\'une disponibilité 24h/24.',
+        },
+        location: {
+          title: 'Emplacements privilégiés',
+          description: 'Nos casiers sont situés au cœur de Paris, ce qui facilite le dépôt et la récupération de vos bagages.',
+        },
+      },
+      cta: {
+        title: 'Prêt à explorer Paris ?',
+        subtitle: 'Trouvez un casier près de vous et commencez votre aventure.',
+        button: 'Trouver un casier',
+      },
+    },
+    terms: {
+      title: 'Conditions d\'utilisation',
+      lastUpdated: 'Dernière mise à jour : janvier 2025',
+      section1: {
+        title: '1. Acceptation des conditions',
+        content: 'En accédant et en utilisant les services d\'Oui Lockers, vous acceptez et convenez d\'être lié par les termes et dispositions de cet accord.',
+      },
+      section2: {
+        title: '2. Description du service',
+        content: 'Oui Lockers offre aux utilisateurs l\'accès à des casiers de stockage sécurisé dans différents endroits à Paris. Les utilisateurs peuvent louer des casiers à l\'heure, à la journée ou au mois.',
+      },
+      section3: {
+        title: '3. Responsabilités de l\'utilisateur',
+        content: 'Les utilisateurs sont responsables de s\'assurer que leurs affaires sont correctement sécurisées et de maintenir leurs codes d\'accès. Les utilisateurs ne doivent pas stocker d\'articles interdits.',
+      },
+      section4: {
+        title: '4. Paiement et tarification',
+        content: 'Toutes les locations doivent être payées à l\'avance. Les prix sont calculés en fonction de la durée de location et de la taille du casier sélectionné.',
+      },
+      section5: {
+        title: '5. Limitation de responsabilité',
+        content: 'Oui Lockers ne sera pas responsable de toute perte ou dommage aux articles stockés, sauf en cas de négligence de notre part.',
+      },
+      section6: {
+        title: '6. Nous contacter',
+        content: 'Si vous avez des questions sur ces conditions d\'utilisation, veuillez nous contacter à help@ouilockers.com.',
+      },
+    },
+    privacy: {
+      title: 'Politique de confidentialité',
+      subtitle: 'Comment nous protégeons et traitons vos données personnelles.',
+      section1: {
+        title: 'Informations que nous collectons',
+        content: 'Nous collectons des informations personnelles telles que votre nom, adresse e-mail, numéro de téléphone et coordonnées de paiement lorsque vous effectuez une réservation.',
+      },
+      section2: {
+        title: 'Comment nous utilisons vos informations',
+        content: 'Vos informations sont utilisées pour traiter les réservations, fournir un support client et communiquer avec vous au sujet de vos réservations.',
+      },
+      section3: {
+        title: 'Protection des données',
+        content: 'Nous mettons en œuvre des mesures de sécurité appropriées pour protéger vos données personnelles contre tout accès non autorisé, altération, divulgation ou destruction.',
+      },
+      section4: {
+        title: 'Vos droits',
+        content: 'Vous avez le droit d\'accéder, de corriger ou de supprimer vos données personnelles. Contactez-nous pour exercer ces droits.',
+      },
+      section5: {
+        title: 'Modifications de cette politique',
+        content: 'Nous pouvons mettre à jour cette politique de confidentialité de temps à autre. Toute modification sera publiée sur cette page.',
+      },
+      contactTitle: 'Nous contacter',
+      phone: 'Téléphone',
+      address: 'Adresse',
+    },
+    cookies: {
+      title: 'Politique de cookies',
+      subtitle: 'Comprendre comment nous utilisons les cookies.',
+      intro: 'Cette politique de cookies explique ce que sont les cookies et comment Oui Lockers les utilise. En utilisant notre service, vous acceptez notre utilisation des cookies.',
+      essential: {
+        title: 'Cookies essentiels',
+        description: 'Ces cookies sont nécessaires au fonctionnement du site web et ne peuvent pas être désactivés.',
+        examples: ['Sécurité de session', 'État de connexion', 'Fonctionnalité du panier'],
+      },
+      functional: {
+        title: 'Cookies fonctionnels',
+        description: 'Ces cookies permettent des fonctionnalités et personnalisation améliorées.',
+        examples: ['Préférences de langue', 'Paramètres de région'],
+      },
+      analytics: {
+        title: 'Cookies analytiques',
+        description: 'Ces cookies nous aident à comprendre comment les visiteurs interagissent avec notre site web.',
+        examples: ['Pages vues', 'Sources de trafic', 'Parcours utilisateur'],
+      },
+      manageTitle: 'Gérer vos cookies',
+      manageDescription: 'Vous pouvez contrôler ou supprimer les cookies via les paramètres de votre navigateur.',
+      browserSettings: 'Paramètres du navigateur',
+      cookieSettings: 'Paramètres des cookies',
+      thirdPartyTitle: 'Cookies tiers',
+      thirdPartyDescription: 'Nous pouvons utiliser des services tiers qui définissent également des cookies sur votre appareil.',
+      updatesTitle: 'Mises à jour de cette politique',
+      updatesDescription: 'Nous pouvons mettre à jour cette politique de temps à temps. Veuillez la consulter périodiquement.',
+    },
+    blog: {
+      title: 'Blog',
+      subtitle: 'Conseils, guides et histoires sur le stockage de bagages et les voyages à Paris.',
+      categories: {
+        all: 'Tout',
+        tips: 'Conseils',
+        locations: 'Emplacements',
+        travel: 'Voyage',
+      },
+      posts: {
+        guide: {
+          title: 'Le guide ultime du stockage de bagages à Paris',
+          excerpt: 'Tout ce que vous devez savoir sur le stockage sécurisé de vos bagages tout en explorant la ville lumière.',
+          date: '15 jan. 2025',
+          readTime: '5 min de lecture',
+        },
+        marais: {
+          title: 'Meilleurs endroits pour stocker vos bagages près du Marais',
+          excerpt: 'Découvrez les emplacements les plus pratiques pour stocker vos sacs tout en faisant du shopping dans le quartier du Marais.',
+          date: '10 jan. 2025',
+          readTime: '3 min de lecture',
+        },
+        tips: {
+          title: '10 conseils pour voyager léger à Paris',
+          excerpt: 'Apprenez à faire vos valises intelligemment et à tirer le meilleur de votre voyage à Paris sans baggage lourd.',
+          date: '5 jan. 2025',
+          readTime: '4 min de lecture',
+        },
+      },
+      readMore: 'Lire la suite',
+      newsletter: {
+        title: 'Recevez des conseils de voyage',
+        subtitle: 'Abonnez-vous à notre newsletter pour des offres exclusives et des conseils de voyage à Paris.',
+        placeholder: 'Entrez votre e-mail',
+        button: 'S\'abonner',
+      },
+    },
+    careers: {
+      title: 'Carrières chez Oui Lockers',
+      subtitle: 'Rejoignez notre équipe et aidez à révolutionner le stockage de bagages.',
+      whyJoin: 'Pourquoi nous rejoindre ?',
+      whyJoinSubtitle: 'Faites partie d\'une startup en croissance au cœur de Paris',
+      benefits: {
+        health: {
+          title: 'Avantages santé',
+          description: 'Assurance santé complète et programmes de bien-être.',
+        },
+        flexibility: {
+          title: 'Travail flexible',
+          description: 'Options de télétravail et horaires de travail flexibles.',
+        },
+        growth: {
+          title: 'Opportunités de croissance',
+          description: 'Développement de carrière et programmes de formation.',
+        },
+      },
+      openPositions: 'Postes vacants',
+      positionsSubtitle: 'Trouvez votre prochain poste chez Oui Lockers',
+      positions: {
+        customerService: {
+          title: 'Représentant du service client',
+          department: 'Opérations',
+          location: 'Paris, France',
+          type: 'Temps plein',
+        },
+        operationsManager: {
+          title: 'Responsable des opérations',
+          department: 'Management',
+          location: 'Paris, France',
+          type: 'Temps plein',
+        },
+      },
+      apply: 'Postuler',
+      noPositions: 'Aucun poste vacant pour le moment. Revenez bientôt !',
+      cta: {
+        title: 'Vous ne trouvez pas le bon rôle ?',
+        subtitle: 'Nous cherchons toujours des talents. Envoyez-nous votre CV !',
+        button: 'Nous écrire',
+      },
+    },
+    press: {
+      title: 'Presse',
+      subtitle: 'Dernières nouvelles, couverture médiatique et ressources presse.',
+      pressKit: 'Dossier de presse',
+      pressKitDescription: 'Téléchargez nos ressources de marque et supports médias.',
+      brandAssets: 'Identité de marque',
+      brandAssetsDesc: 'Logos, couleurs et directives de marque',
+      factSheet: 'Fiche d\'entreprise',
+      factSheetDesc: 'Présentation de l\'entreprise et faits clés',
+      highResPhotos: 'Photos haute résolution',
+      download: 'Télécharger',
+      releasesTitle: 'Communiqués de presse',
+      releases: {
+        expansion: {
+          date: 'Décembre 2024',
+          title: 'Oui Lockers s\'étend à 5 nouveaux emplacements à Paris',
+          excerpt: 'Le leader du stockage de bagages annonce une expansion rapide à travers la capitale française.',
+        },
+        partnership: {
+          date: 'Octobre 2024',
+          title: 'Oui Lockers s\'associe avec les grands hôtels',
+          excerpt: 'De nouveaux partenariats rendent le stockage de bagages plus accessible pour les clients hôtel.',
+        },
+        award: {
+          date: 'Août 2024',
+          title: 'Oui Lockers gagne le prix de la meilleure innovation voyage',
+          excerpt: 'Reconnaissance pour la révolution du stockage de bagages dans les villes européennes.',
+        },
+      },
+      coverageTitle: 'Couverture médiatique',
+      coverage: {
+        figaro: {
+          date: 'Novembre 2024',
+          title: 'Comment Oui Lockers simplifie les voyages à Paris',
+        },
+        echos: {
+          date: 'Septembre 2024',
+          title: 'La startup qui révolutionne le stockage de bagages',
+        },
+        match: {
+          date: 'Juillet 2024',
+          title: 'La solution intelligente de Paris pour les voyageurs',
+        },
+      },
+      readMore: 'Lire la suite',
+      contactTitle: 'Contact presse',
+      contactDescription: 'Pour toute demande médiatique, veuillez contacter notre équipe de presse.',
+    },
   },
   es: {
     nav: {
@@ -556,6 +1171,252 @@ export const translations: Record<Language, Translations> = {
       copy: 'Copiar código',
       copied: '¡Copiado!',
       dismiss: 'Cerrar',
+    },
+    about: {
+      title: 'Acerca de Oui Lockers',
+      subtitle: 'Haciendo el almacenamiento de equipaje simple, seguro y accesible en París.',
+      lockersStored: 'Equipajes almacenados',
+      happyCustomers: 'Clientes satisfechos',
+      rating: 'Valoración',
+      locations: 'Ubicaciones',
+      story: {
+        title: 'Nuestra historia',
+        paragraph1: 'Fundada en 2020, Oui Lockers comenzó con una misión simple: hacer que el almacenamiento de equipaje sea sin estrés para los viajeros que visitan París. Lo que comenzó como una sola ubicación cerca del Marais ha crecido en múltiples ubicaciones convenientes en toda la ciudad.',
+        paragraph2: 'Hoy, continuamos innovando con taquillas inteligentes y sin contacto que dan a los viajeros la libertad de explorar París con las manos libres. Nuestro equipo está apasionado por el servicio al cliente y asegura que cada visitante tenga una experiencia perfecta.',
+      },
+      founded: 'Fundado en París',
+      ourValues: 'Nuestros valores',
+      valuesSubtitle: 'Lo que nos impulsa cada día',
+      values: {
+        security: {
+          title: 'Seguridad primero',
+          description: 'Tus pertenencias están seguras con nosotros. Todas las taquillas están monitoreadas 24/7 por CCTV y equipadas con sistemas de alarma individuales.',
+        },
+        convenience: {
+          title: 'Máxima comodidad',
+          description: 'Reserva en línea en segundos, accede a tu taquilla instantáneamente con un código PIN y disfruta de disponibilidad 24/7.',
+        },
+        location: {
+          title: 'Ubicaciones privilegiadas',
+          description: 'Nuestras taquillas están situadas en el corazón de París, facilitando dejar y recoger tu equipaje.',
+        },
+      },
+      cta: {
+        title: '¿Listo para explorar París?',
+        subtitle: 'Encuentra una taquilla cerca de ti y comienza tu aventura.',
+        button: 'Encontrar una taquilla',
+      },
+    },
+    terms: {
+      title: 'Términos de servicio',
+      lastUpdated: 'Última actualización: enero 2025',
+      section1: {
+        title: '1. Aceptación de términos',
+        content: 'Al acceder y usar los servicios de Oui Lockers, aceptas y acuerdas estar obligado por los términos y disposiciones de este acuerdo.',
+      },
+      section2: {
+        title: '2. Descripción del servicio',
+        content: 'Oui Lockers proporciona a los usuarios acceso a taquillas de almacenamiento seguro en varias ubicaciones en París. Los usuarios pueden alquilar taquillas por hora, día o mes.',
+      },
+      section3: {
+        title: '3. Responsabilidades del usuario',
+        content: 'Los usuarios son responsables de asegurar que sus pertenencias estén correctamente aseguradas y de mantener sus códigos de acceso. Los usuarios no deben almacenar artículos prohibidos.',
+      },
+      section4: {
+        title: '4. Pago y precios',
+        content: 'Todos los alquileres deben pagarse por adelantado. Los precios se calculan según la duración del alquiler y el tamaño de la taquilla seleccionada.',
+      },
+      section5: {
+        title: '5. Limitación de responsabilidad',
+        content: 'Oui Lockers no será responsable por cualquier pérdida o daño a los artículos almacenados, excepto cuando sea causado por nuestra negligencia.',
+      },
+      section6: {
+        title: '6. Contáctenos',
+        content: 'Si tienes alguna pregunta sobre estos Términos de Servicio, contáctanos en help@ouilockers.com.',
+      },
+    },
+    privacy: {
+      title: 'Política de privacidad',
+      subtitle: 'Cómo protegemos y manejamos tus datos personales.',
+      section1: {
+        title: 'Información que recopilamos',
+        content: 'Recopilamos información personal como tu nombre, correo electrónico, número de teléfono y datos de pago cuando realizas una reserva.',
+      },
+      section2: {
+        title: 'Cómo usamos tu información',
+        content: 'Tu información se usa para procesar reservas, proporcionar soporte al cliente y comunicarte sobre tus reservaciones.',
+      },
+      section3: {
+        title: 'Protección de datos',
+        content: 'Implementamos medidas de seguridad apropiadas para proteger tus datos personales contra acceso no autorizado, alteración, divulgación o destrucción.',
+      },
+      section4: {
+        title: 'Tus derechos',
+        content: 'Tienes derecho a acceder, corregir o eliminar tus datos personales. Contáctanos para ejercer estos derechos.',
+      },
+      section5: {
+        title: 'Cambios a esta política',
+        content: 'Podemos actualizar esta política de privacidad de vez en cuando. Cualquier cambio se publicará en esta página.',
+      },
+      contactTitle: 'Contáctanos',
+      phone: 'Teléfono',
+      address: 'Dirección',
+    },
+    cookies: {
+      title: 'Política de cookies',
+      subtitle: 'Entendiendo cómo usamos las cookies.',
+      intro: 'Esta Política de Cookies explica qué son las Cookies y cómo Oui Lockers las usa. Al usar nuestro servicio, aceptas nuestro uso de cookies.',
+      essential: {
+        title: 'Cookies esenciales',
+        description: 'Estas cookies son necesarias para que el sitio web funcione y no se pueden desactivar.',
+        examples: ['Seguridad de sesión', 'Estado de inicio', 'Funcionalidad del carrito'],
+      },
+      functional: {
+        title: 'Cookies funcionales',
+        description: 'Estas cookies permiten funcionalidad y personalización mejoradas.',
+        examples: ['Preferencias de idioma', 'Configuración de región'],
+      },
+      analytics: {
+        title: 'Cookies analíticas',
+        description: 'Estas cookies nos ayudan a entender cómo los visitantes interactúan con nuestro sitio web.',
+        examples: ['Vistas de página', 'Fuentes de tráfico', 'Recorridos de usuario'],
+      },
+      manageTitle: 'Gestionando tus cookies',
+      manageDescription: 'Puedes controlar o eliminar cookies a través de la configuración de tu navegador.',
+      browserSettings: 'Configuración del navegador',
+      cookieSettings: 'Configuración de cookies',
+      thirdPartyTitle: 'Cookies de terceros',
+      thirdPartyDescription: 'Podemos usar servicios de terceros que también establecen cookies en tu dispositivo.',
+      updatesTitle: 'Actualizaciones a esta política',
+      updatesDescription: 'Podemos actualizar esta política de vez en cuando. Por favor, revísala periódicamente.',
+    },
+    blog: {
+      title: 'Blog',
+      subtitle: 'Consejos, guías e historias sobre almacenamiento de equipaje y viajes a París.',
+      categories: {
+        all: 'Todo',
+        tips: 'Consejos',
+        locations: 'Ubicaciones',
+        travel: 'Viaje',
+      },
+      posts: {
+        guide: {
+          title: 'La guía definitiva para almacenar equipaje en París',
+          excerpt: 'Todo lo que necesitas saber sobre almacenar tu equipaje de forma segura mientras exploras la ciudad de la luz.',
+          date: '15 ene. 2025',
+          readTime: '5 min de lectura',
+        },
+        marais: {
+          title: 'Mejores lugares para equipaje cerca del Marais',
+          excerpt: 'Descubre las ubicaciones más convenientes para guardar tus bolsas mientras compras en el distrito del Marais.',
+          date: '10 ene. 2025',
+          readTime: '3 min de lectura',
+        },
+        tips: {
+          title: '10 consejos para viajar ligero en París',
+          excerpt: 'Aprende a hacer las maletas de manera inteligente y aprovechar al máximo tu viaje a París sin el equipaje pesado.',
+          date: '5 ene. 2025',
+          readTime: '4 min de lectura',
+        },
+      },
+      readMore: 'Leer más',
+      newsletter: {
+        title: 'Recibe consejos de viaje',
+        subtitle: 'Suscríbete a nuestro newsletter para ofertas exclusivas y consejos de viaje a París.',
+        placeholder: 'Ingresa tu correo',
+        button: 'Suscribirse',
+      },
+    },
+    careers: {
+      title: 'Carreras en Oui Lockers',
+      subtitle: 'Únete a nuestro equipo y ayuda a revolucionar el almacenamiento de equipaje.',
+      whyJoin: '¿Por qué unirse a nosotros?',
+      whyJoinSubtitle: 'Sé parte de una startup en crecimiento en el corazón de París',
+      benefits: {
+        health: {
+          title: 'Beneficios de salud',
+          description: 'Seguro de salud integral y programas de bienestar.',
+        },
+        flexibility: {
+          title: 'Trabajo flexible',
+          description: 'Opciones de trabajo remoto y horarios laborales flexibles.',
+        },
+        growth: {
+          title: 'Oportunidades de crecimiento',
+          description: 'Desarrollo profesional y programas de formación.',
+        },
+      },
+      openPositions: 'Posiciones abiertas',
+      positionsSubtitle: 'Encuentra tu próximo rol en Oui Lockers',
+      positions: {
+        customerService: {
+          title: 'Representante de servicio al cliente',
+          department: 'Operaciones',
+          location: 'París, Francia',
+          type: 'Tiempo completo',
+        },
+        operationsManager: {
+          title: 'Gerente de operaciones',
+          department: 'Gestión',
+          location: 'París, Francia',
+          type: 'Tiempo completo',
+        },
+      },
+      apply: 'Aplicar ahora',
+      noPositions: 'No hay posiciones abiertas en este momento. ¡Vuelve pronto!',
+      cta: {
+        title: '¿No ves el rol adecuado?',
+        subtitle: 'Siempre estamos buscando personas talentosas. ¡Envíanos tu CV!',
+        button: 'Escríbenos',
+      },
+    },
+    press: {
+      title: 'Prensa',
+      subtitle: 'Últimas noticias, cobertura mediática y recursos de prensa.',
+      pressKit: 'Dossier de prensa',
+      pressKitDescription: 'Descarga nuestros recursos de marca y materiales mediáticos.',
+      brandAssets: 'Recursos de marca',
+      brandAssetsDesc: 'Logos, colores y guía de marca',
+      factSheet: 'Hoja de datos',
+      factSheetDesc: 'Resumen de la empresa y datos clave',
+      highResPhotos: 'Fotos de alta resolución',
+      download: 'Descargar',
+      releasesTitle: 'Comunicados de prensa',
+      releases: {
+        expansion: {
+          date: 'Diciembre 2024',
+          title: 'Oui Lockers se expande a 5 nuevas ubicaciones en París',
+          excerpt: 'El servicio líder de almacenamiento de equipaje anuncia una rápida expansión por la capital francesa.',
+        },
+        partnership: {
+          date: 'Octubre 2024',
+          title: 'Oui Lockers se asocia con grandes hoteles',
+          excerpt: 'Nuevas asociaciones hacen el almacenamiento de equipaje más accesible para los huéspedes de hoteles.',
+        },
+        award: {
+          date: 'Agosto 2024',
+          title: 'Oui Lockers gana el premio a la mejor innovación de viaje',
+          excerpt: 'Reconocimiento por revolucionar el almacenamiento de equipaje en ciudades europeas.',
+        },
+      },
+      coverageTitle: 'Cobertura mediática',
+      coverage: {
+        figaro: {
+          date: 'Noviembre 2024',
+          title: 'Cómo Oui Lockers está simplificando los viajes en París',
+        },
+        echos: {
+          date: 'Septiembre 2024',
+          title: 'La startup que revoluciona el almacenamiento de equipaje',
+        },
+        match: {
+          date: 'Julio 2024',
+          title: 'La solución inteligente de París para viajeros',
+        },
+      },
+      readMore: 'Leer más',
+      contactTitle: 'Contacto de prensa',
+      contactDescription: 'Para consultas mediáticas, contacta a nuestro equipo de prensa.',
     },
   },
 };
