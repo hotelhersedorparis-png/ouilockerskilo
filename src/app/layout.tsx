@@ -1,20 +1,41 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Manrope, Inter } from "next/font/google";
 import "./globals.css";
+import { Toaster } from "@/components/ui/toaster";
+import { LanguageProvider } from "@/contexts/LanguageContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
+  display: "swap",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Next.js Template",
-  description: "A minimal Next.js starter template",
+  title: "OuiLockers Paris | Premium 24/7 Luggage Storage in Le Marais",
+  description: "Secure 24/7 automated luggage storage in Paris Le Marais. €30/day, up to 4 bags per locker. Book online instantly. Located at 20 Rue Saint-Antoine, 75004 Paris.",
+  keywords: ["OuiLockers", "luggage storage Paris", "consigne bagages Paris", "lockers Paris", "bagages Le Marais", "storage Bastille", "24/7 luggage storage"],
+  authors: [{ name: "OuiLockers by Hôtel Herse d'Or" }],
+  icons: {
+    icon: "/logo-officiel.png",
+  },
+  openGraph: {
+    title: "OuiLockers Paris | Premium 24/7 Luggage Storage",
+    description: "Secure 24/7 automated luggage storage in Paris Le Marais. Book online instantly and explore Paris hands-free.",
+    url: "https://www.ouilockers.com",
+    siteName: "OuiLockers",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "OuiLockers Paris | Premium 24/7 Luggage Storage",
+    description: "Secure 24/7 automated luggage storage in Paris Le Marais. Book online instantly.",
+  },
 };
 
 export default function RootLayout({
@@ -23,11 +44,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${manrope.variable} ${inter.variable} antialiased bg-background text-foreground`}
       >
-        {children}
+        <LanguageProvider>
+          {children}
+          <Toaster />
+        </LanguageProvider>
       </body>
     </html>
   );

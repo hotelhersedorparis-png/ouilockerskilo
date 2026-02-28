@@ -1,1 +1,255 @@
 @import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+/* Corporate Utilities - Clean White Theme */
+@layer utilities {
+  .glass {
+    @apply bg-white border border-slate-200 shadow-sm;
+  }
+  .glass-dark {
+    @apply bg-slate-900/95 border border-slate-700/50;
+  }
+  .glass-card {
+    @apply bg-white border border-slate-200 shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  .glass-dark-card {
+    @apply bg-slate-800/95 border border-slate-700/50 shadow-md;
+  }
+  .glass-button {
+    @apply bg-white border border-slate-300 hover:bg-slate-50 hover:shadow-sm transition-all duration-150;
+  }
+  .glass-hero {
+    @apply bg-white border border-slate-200 shadow-md;
+  }
+  .section-light {
+    @apply bg-white;
+  }
+  .section-gray {
+    @apply bg-slate-50;
+  }
+  .card-corporate {
+    @apply bg-white border border-slate-200 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200;
+  }
+  .card-corporate-lg {
+    @apply bg-white border border-slate-200 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-200;
+  }
+}
+
+/* Premium Gradients - Corporate Light Theme */
+@layer utilities {
+  .gradient-brand {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  }
+  .gradient-brand-dark {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+  }
+  .gradient-corporate {
+    background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
+  }
+  .gradient-mesh {
+    background:
+      radial-gradient(at 40% 20%, rgba(16, 185, 129, 0.02) 0px, transparent 50%),
+      radial-gradient(at 80% 0%, rgba(16, 185, 129, 0.01) 0px, transparent 50%);
+  }
+  .gradient-glow {
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.04) 0%, transparent 70%);
+  }
+  .gradient-glow-hover:hover {
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.06) 0%, transparent 70%);
+  }
+}
+
+/* Glow Effects - Subtle Corporate Theme */
+@layer utilities {
+  .glow-green {
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.1), 0 0 20px rgba(16, 185, 129, 0.05);
+  }
+  .glow-green-sm {
+    box-shadow: 0 0 6px rgba(16, 185, 129, 0.1);
+  }
+  .glow-green-hover:hover {
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.15), 0 0 20px rgba(16, 185, 129, 0.08);
+  }
+  .shadow-corporate {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.02);
+  }
+  .shadow-corporate-lg {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04), 0 8px 16px rgba(0, 0, 0, 0.03);
+  }
+}
+
+/* Advanced Patterns - Subtle Corporate Theme */
+@layer utilities {
+  .pattern-grid {
+    background-image:
+      linear-gradient(rgba(148, 163, 184, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(148, 163, 184, 0.03) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .pattern-grid-dark {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 80px 80px;
+  }
+  .pattern-dots {
+    background-image: radial-gradient(rgba(16, 185, 129, 0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .pattern-circles {
+    background-image: radial-gradient(circle at 1px 1px, rgba(16, 185, 129, 0.03) 1px, transparent 0);
+    background-size: 48px 48px;
+  }
+}
+
+/* Animation Enhancements */
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  .animate-pulse-slow {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  .animate-shimmer {
+    background-size: 200% 100%;
+    animation: shimmer 3s infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 200% center;
+  }
+  100% {
+    background-position: -200% center;
+  }
+}
+
+/* Premium Typography - Corporate Light Theme */
+@layer base {
+  .text-gradient {
+    @apply bg-gradient-to-r from-emerald-600 via-emerald-500 to-teal-600 bg-clip-text text-transparent;
+  }
+  .text-gradient-dark {
+    @apply bg-gradient-to-r from-white via-gray-100 to-gray-200 bg-clip-text text-transparent;
+  }
+  .text-gradient-corporate {
+    @apply bg-gradient-to-r from-slate-900 via-slate-700 to-slate-900 bg-clip-text text-transparent;
+  }
+}
+
+/* Enhanced Scrollbar - Light Corporate Theme */
+@layer utilities {
+  .scrollbar-premium {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(16, 185, 129, 0.2) transparent;
+  }
+  .scrollbar-premium::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-premium::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-premium::-webkit-scrollbar-thumb {
+    background: rgba(16, 185, 129, 0.2);
+    border-radius: 3px;
+  }
+  .scrollbar-premium::-webkit-scrollbar-thumb:hover {
+    background: rgba(16, 185, 129, 0.35);
+  }
+  .scrollbar-corporate {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(15, 23, 42, 0.12) transparent;
+  }
+  .scrollbar-corporate::-webkit-scrollbar {
+    width: 6px;
+  }
+  .scrollbar-corporate::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .scrollbar-corporate::-webkit-scrollbar-thumb {
+    background: rgba(15, 23, 42, 0.12);
+    border-radius: 3px;
+  }
+  .scrollbar-corporate::-webkit-scrollbar-thumb:hover {
+    background: rgba(15, 23, 42, 0.2);
+  }
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-inter);
+  --font-heading: var(--font-manrope);
+  --color-brand-dark: #064e3b;
+  --color-brand-green: #10b981;
+  --color-brand-green-light: #34d399;
+  --color-brand-green-dark: #059669;
+  --color-brand-white: #FFFFFF;
+}
+
+/* Light Mode - Clean White Corporate Theme */
+:root {
+  --radius: 0.5rem;
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+  --primary: #059669;
+  --primary-foreground: #ffffff;
+  --secondary: #f8fafc;
+  --secondary-foreground: #0f172a;
+  --muted: #f1f5f9;
+  --muted-foreground: #64748b;
+  --accent: #f0fdf4;
+  --accent-foreground: #0f172a;
+  --destructive: #ef4444;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #059669;
+  --chart-1: #059669;
+  --chart-2: #10b981;
+  --chart-3: #34d399;
+  --chart-4: #6ee7b7;
+  --chart-5: #d1fae5;
+}
+
+/* Dark Mode - Green Theme */
+.dark {
+  --background: #064e3b;
+  --foreground: #ffffff;
+  --card: #065f46;
+  --card-foreground: #ffffff;
+  --popover: #065f46;
+  --popover-foreground: #ffffff;
+  --primary: #10b981;
+  --primary-foreground: #ffffff;
+  --secondary: #047857;
+  --secondary-foreground: #ffffff;
+  --muted: #047857;
+  --muted-foreground: #94a3b8;
+  --accent: #059669;
+  --accent-foreground: #ffffff;
+  --destructive: #ef4444;
+  --border: rgba(255, 255, 255, 0.1);
+  --input: rgba(255, 255, 255, 0.15);
+  --ring: #10b981;
+  --chart-1: #10b981;
+  --chart-2: #34d399;
+  --chart-3: #6ee7b7;
+  --chart-4: #a7f3d0;
+  --chart-5: #d1fae5;
+}
